@@ -24,8 +24,8 @@ b1 = torch.randn(1)*0.01
 b2 = torch.randn(1)*0.01
 
 losses = []
-epoches = 1000
-for epoch in range(epoches):
+epochs = 1000
+for epoch in range(epochs):
     
     # forward propagation
     z1 = torch.mm(w1, data).add(b1)
@@ -64,12 +64,16 @@ z1 = torch.mm(w1, data).add(b1)
 a1 = torch.tanh(z1)
 z2 = torch.mm(w2, a1).add(b2)
 a2 = torch.sigmoid(z2) 
-print(a2)
+
+# print the output
+np.set_printoptions(suppress=True)
+np.set_printoptions(precision=4)
+print(a2.numpy())
 # print(a2.argmax(dim=0)) # print the index of max value in each line
 
 plt.xlabel("epoch") 
 plt.ylabel("loss") 
-plt.plot(np.arange(epoches), losses)
+plt.plot(np.arange(epochs), losses)
 plt.show()
 
 
