@@ -13,8 +13,8 @@ data= torch.eye(l1)
 y = torch.eye(l3)
 
 # initial weights and biases
-w1 = torch.randn(l2,l1)
-w2 = torch.randn(l3, l2)
+w1 = torch.randn(l2,l1)* 0.01
+w2 = torch.randn(l3, l2)* 0.01
 b1 = np.zeros(shape=(l2, 1))           # vector of shape (3, 1)
 b2 = np.zeros(shape=(l3, 1))           # vector of shape (8, 1)
 
