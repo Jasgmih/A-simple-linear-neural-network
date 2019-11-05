@@ -68,7 +68,7 @@ a2 = torch.sigmoid(z2)
 # print the output
 np.set_printoptions(suppress=True)
 np.set_printoptions(precision=4)
-print(a2.numpy())
+print("\n The output data is: \n", a2.numpy())
 # print(a2.argmax(dim=0)) # print the index of max value in each line
 
 plt.xlabel("epoch") 
